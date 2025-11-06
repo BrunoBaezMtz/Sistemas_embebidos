@@ -5,6 +5,25 @@
 #include <xc.h>
 #define _XTAL_FREQ 20000000 //20MHz
 
+void lcdCommand(unsigned char cmd){
+    RS = 0;
+    PORTD = cmd;
+    EN = 1;
+    __delay_ms(1);
+    EN = 0;
+    __delay_ms(1);
+    
+}
+
+void lcdCommand(unsigned char data){
+    RS = 0;
+    PORTD = data;
+    EN = 1;
+    __delay_ms(1);
+    EN = 0;
+    __delay_ms(1);
+    
+}
 
 void adc_init(void){
     TRISA = 0b00000001; //pin AN0
@@ -28,4 +47,12 @@ unsigned int adc_read_an0(void){
     while(GO_nDONE);
     return ((unsigned int)ADRESH<<8|ADRESL);
     
+}
+
+void main(void){
+    adc_init();
+    
+    while (1){
+        uint16_t
+    }
 }
