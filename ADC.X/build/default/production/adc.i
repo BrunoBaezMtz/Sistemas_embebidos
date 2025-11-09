@@ -2128,13 +2128,13 @@ void lcdCommand(unsigned char cmd){
 
 }
 
-void lcdCommand(unsigned char data){
-    PORTBbits.RB6 = 0;
+void lcSendDataByte(unsigned char data){
+    PORTBbits.RB6 = 1;
     PORTD = data;
     PORTBbits.RB7 = 1;
     _delay((unsigned long)((1)*(20000000/4000.0)));
     PORTBbits.RB7 = 0;
-    _delay((unsigned long)((1)*(20000000/4000.0)));
+    _delay((unsigned long)((0)*(20000000/4000.0)));
 
 }
 
@@ -2147,7 +2147,7 @@ void lcd_init(){
     _delay((unsigned long)((1)*(20000000/4000.0)));
 }
 
-void adc_init(){
+void adc_init(void){
     TRISA = 0b00000001;
     ADCON1 = 0b11001110;
     ADCON0 = 0b10000001;
@@ -2157,7 +2157,8 @@ void adc_init(){
 
 void lcdSendString(char *addr){
     while (*addr){
-        lcSendDataByted(*addr);
+        lcSendDataByte(*addr);
+        addr++;
 
     }
 }

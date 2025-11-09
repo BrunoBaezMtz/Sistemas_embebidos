@@ -22,13 +22,13 @@ void lcdCommand(unsigned char cmd){
     
 }
 
-void lcdCommand(unsigned char data){
-    RS = 0;
+void lcSendDataByte(unsigned char data){
+    RS = 1;
     PORTD = data;
     EN = 1;
     __delay_ms(1);
     EN = 0;
-    __delay_ms(1);
+    __delay_ms(0);
     
 }
 
@@ -41,7 +41,7 @@ void lcd_init(){
     __delay_ms(1);
 }
 
-void adc_init(){
+void adc_init(void){
     TRISA = 0b00000001;
     ADCON1 = 0b11001110;
     ADCON0 = 0b10000001;
@@ -51,7 +51,7 @@ void adc_init(){
 
 void lcdSendString(char *addr){
     while (*addr){
-        lcSendDataByted(*addr);
+        lcSendDataByte(*addr);
         addr++;
         
     }
