@@ -11,11 +11,11 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$dist/default/debug\PWM.X.debug.o
+$C:\Users\BZ\AppData\Local\Temp\xcAsgao.0\driver_tmp_12.o
+end_init CODE 0 0 0 3 2 1
+$dist/default/production\PWM.X.production.o
 cinit CODE 0 7FC 7FC 4 2 1
 maintext CODE 0 7D5 7D5 27 2 1
-$C:\Users\BZ\AppData\Local\Temp\xcAs9jg.0\driver_tmp_12.o
-end_init CODE 0 0 0 3 2 1
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
 # is described on a single line as follows:
@@ -61,12 +61,12 @@ STRING 800-1FFF 2
 # are in ascending order of addresses.
 # All other numeric values are in decimal.
 %LINETAB
-$dist/default/debug\PWM.X.debug.o
-7FC cinit CODE >354:C:\Users\BZ\AppData\Local\Temp\xcAs9jg.0\driver_tmp_1.s
-7FC cinit CODE >357:C:\Users\BZ\AppData\Local\Temp\xcAs9jg.0\driver_tmp_1.s
-7FC cinit CODE >363:C:\Users\BZ\AppData\Local\Temp\xcAs9jg.0\driver_tmp_1.s
-7FC cinit CODE >365:C:\Users\BZ\AppData\Local\Temp\xcAs9jg.0\driver_tmp_1.s
-7FD cinit CODE >366:C:\Users\BZ\AppData\Local\Temp\xcAs9jg.0\driver_tmp_1.s
+$dist/default/production\PWM.X.production.o
+7FC cinit CODE >354:C:\Users\BZ\AppData\Local\Temp\xcAsgao.0\driver_tmp_1.s
+7FC cinit CODE >357:C:\Users\BZ\AppData\Local\Temp\xcAsgao.0\driver_tmp_1.s
+7FC cinit CODE >363:C:\Users\BZ\AppData\Local\Temp\xcAsgao.0\driver_tmp_1.s
+7FC cinit CODE >365:C:\Users\BZ\AppData\Local\Temp\xcAsgao.0\driver_tmp_1.s
+7FD cinit CODE >366:C:\Users\BZ\AppData\Local\Temp\xcAsgao.0\driver_tmp_1.s
 7D5 maintext CODE >14:F:\universidad\porgramacion de enbevidos\Sistemas_embebidos\PWM.X\PWM.c
 7D5 maintext CODE >15:F:\universidad\porgramacion de enbevidos\Sistemas_embebidos\PWM.X\PWM.c
 7D5 maintext CODE >16:F:\universidad\porgramacion de enbevidos\Sistemas_embebidos\PWM.X\PWM.c
@@ -97,7 +97,7 @@ $dist/default/debug\PWM.X.debug.o
 # was defined in a psect then <psect> will be "-". File-name
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
-___latbits 2 0 ABS 0 - dist/default/debug\PWM.X.debug.o
+___latbits 2 0 ABS 0 - dist/default/production\PWM.X.production.o
 __Hspace_0 800 0 ABS 0 - -
 __Hspace_1 0 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
@@ -105,28 +105,28 @@ __Hspace_3 0 0 ABS 0 - -
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 __L__absolute__ 0 0 ABS 0 __absolute__ -
 __Hstrings 0 0 ABS 0 strings -
-___sp 0 0 STACK 2 stack C:\Users\BZ\AppData\Local\Temp\xcAs9jg.0\driver_tmp_12.o
-_main FAA 0 CODE 0 maintext dist/default/debug\PWM.X.debug.o
-btemp 7E 0 ABS 0 - dist/default/debug\PWM.X.debug.o
-___stack_hi 0 0 STACK 2 stack C:\Users\BZ\AppData\Local\Temp\xcAs9jg.0\driver_tmp_12.o
-___stack_lo 0 0 STACK 2 stack C:\Users\BZ\AppData\Local\Temp\xcAs9jg.0\driver_tmp_12.o
-start 0 0 CODE 0 init C:\Users\BZ\AppData\Local\Temp\xcAs9jg.0\driver_tmp_12.o
+___sp 0 0 STACK 2 stack C:\Users\BZ\AppData\Local\Temp\xcAsgao.0\driver_tmp_12.o
+_main FAA 0 CODE 0 maintext dist/default/production\PWM.X.production.o
+btemp 7E 0 ABS 0 - dist/default/production\PWM.X.production.o
+___stack_hi 0 0 STACK 2 stack C:\Users\BZ\AppData\Local\Temp\xcAsgao.0\driver_tmp_12.o
+___stack_lo 0 0 STACK 2 stack C:\Users\BZ\AppData\Local\Temp\xcAsgao.0\driver_tmp_12.o
+start 0 0 CODE 0 init C:\Users\BZ\AppData\Local\Temp\xcAsgao.0\driver_tmp_12.o
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\BZ\AppData\Local\Temp\xcAs9jg.0\driver_tmp_12.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\BZ\AppData\Local\Temp\xcAs9jg.0\driver_tmp_12.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\BZ\AppData\Local\Temp\xcAs9jg.0\driver_tmp_12.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\BZ\AppData\Local\Temp\xcAs9jg.0\driver_tmp_12.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\BZ\AppData\Local\Temp\xcAs9jg.0\driver_tmp_12.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\BZ\AppData\Local\Temp\xcAs9jg.0\driver_tmp_12.o
-wtemp0 7E 0 ABS 0 - dist/default/debug\PWM.X.debug.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\BZ\AppData\Local\Temp\xcAsgao.0\driver_tmp_12.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\BZ\AppData\Local\Temp\xcAsgao.0\driver_tmp_12.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\BZ\AppData\Local\Temp\xcAsgao.0\driver_tmp_12.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\BZ\AppData\Local\Temp\xcAsgao.0\driver_tmp_12.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\BZ\AppData\Local\Temp\xcAsgao.0\driver_tmp_12.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\BZ\AppData\Local\Temp\xcAsgao.0\driver_tmp_12.o
+wtemp0 7E 0 ABS 0 - dist/default/production\PWM.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
 __Hclrtext 0 0 ABS 0 clrtext -
-_CCPR1L 15 0 ABS 0 - dist/default/debug\PWM.X.debug.o
+_CCPR1L 15 0 ABS 0 - dist/default/production\PWM.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
-___stackhi 0 0 ABS 0 - C:\Users\BZ\AppData\Local\Temp\xcAs9jg.0\driver_tmp_12.o
-___stacklo 0 0 ABS 0 - C:\Users\BZ\AppData\Local\Temp\xcAs9jg.0\driver_tmp_12.o
-start_initialization FF8 0 CODE 0 cinit dist/default/debug\PWM.X.debug.o
-___int_sp 0 0 STACK 2 stack C:\Users\BZ\AppData\Local\Temp\xcAs9jg.0\driver_tmp_12.o
+___stackhi 0 0 ABS 0 - C:\Users\BZ\AppData\Local\Temp\xcAsgao.0\driver_tmp_12.o
+___stacklo 0 0 ABS 0 - C:\Users\BZ\AppData\Local\Temp\xcAsgao.0\driver_tmp_12.o
+start_initialization FF8 0 CODE 0 cinit dist/default/production\PWM.X.production.o
+___int_sp 0 0 STACK 2 stack C:\Users\BZ\AppData\Local\Temp\xcAsgao.0\driver_tmp_12.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -141,7 +141,7 @@ __Lbank2 0 0 ABS 0 bank2 -
 __Lbank3 0 0 ABS 0 bank3 -
 __Lcinit FF8 0 CODE 0 cinit -
 __Lstack 0 0 STACK 2 stack -
-_PORTBbits 6 0 ABS 0 - dist/default/debug\PWM.X.debug.o
+_PORTBbits 6 0 ABS 0 - dist/default/production\PWM.X.production.o
 __Habs1 0 0 ABS 0 abs1 -
 __Hcode 0 0 ABS 0 code -
 __Hheap 0 0 HEAP 7 heap -
@@ -163,14 +163,14 @@ __Lsfr3 0 0 ABS 0 sfr3 -
 __Lsivt 0 0 CODE 0 sivt -
 __Ltext 0 0 ABS 0 text -
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
-_PR2 92 0 ABS 0 - dist/default/debug\PWM.X.debug.o
+_PR2 92 0 ABS 0 - dist/default/production\PWM.X.production.o
 __S0 800 0 ABS 0 - -
 __S1 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
 __Lintentry 0 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\BZ\AppData\Local\Temp\xcAs9jg.0\driver_tmp_12.o
-ltemp0a 80 0 ABS 0 - dist/default/debug\PWM.X.debug.o
-__pmaintext FAA 0 CODE 0 maintext dist/default/debug\PWM.X.debug.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\BZ\AppData\Local\Temp\xcAsgao.0\driver_tmp_12.o
+ltemp0a 80 0 ABS 0 - dist/default/production\PWM.X.production.o
+__pmaintext FAA 0 CODE 0 maintext dist/default/production\PWM.X.production.o
 __Lcommon 0 0 ABS 0 common -
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
@@ -178,7 +178,7 @@ __Lspace_2 0 0 ABS 0 - -
 __Lspace_3 0 0 ABS 0 - -
 __Lend_init 0 0 CODE 0 end_init -
 __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
-end_of_initialization FF8 0 CODE 0 cinit dist/default/debug\PWM.X.debug.o
+end_of_initialization FF8 0 CODE 0 cinit dist/default/production\PWM.X.production.o
 __Hintentry 0 0 CODE 0 intentry -
 __Lstrings 0 0 ABS 0 strings -
 __Hreset_vec 0 0 CODE 0 reset_vec -
@@ -186,27 +186,27 @@ __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
 __H__absolute__ 0 0 ABS 0 __absolute__ -
 __Lreset_vec 0 0 CODE 0 reset_vec -
-___heap_hi 0 0 ABS 0 - C:\Users\BZ\AppData\Local\Temp\xcAs9jg.0\driver_tmp_12.o
-___heap_lo 0 0 ABS 0 - C:\Users\BZ\AppData\Local\Temp\xcAs9jg.0\driver_tmp_12.o
-__end_of__initialization FF8 0 CODE 0 cinit dist/default/debug\PWM.X.debug.o
+___heap_hi 0 0 ABS 0 - C:\Users\BZ\AppData\Local\Temp\xcAsgao.0\driver_tmp_12.o
+___heap_lo 0 0 ABS 0 - C:\Users\BZ\AppData\Local\Temp\xcAsgao.0\driver_tmp_12.o
+__end_of__initialization FF8 0 CODE 0 cinit dist/default/production\PWM.X.production.o
 __Lfunctab 0 0 ENTRY 0 functab -
 __Lclrtext 0 0 ABS 0 clrtext -
-__pcstackCOMMON 0 0 COMMON 1 cstackCOMMON dist/default/debug\PWM.X.debug.o
-wtemp0a 7F 0 ABS 0 - dist/default/debug\PWM.X.debug.o
+__pcstackCOMMON 0 0 COMMON 1 cstackCOMMON dist/default/production\PWM.X.production.o
+wtemp0a 7F 0 ABS 0 - dist/default/production\PWM.X.production.o
 __Hend_init 6 0 CODE 0 end_init -
-__end_of_main FF8 0 CODE 0 maintext dist/default/debug\PWM.X.debug.o
-_T2CON 12 0 ABS 0 - dist/default/debug\PWM.X.debug.o
-_TRISB 86 0 ABS 0 - dist/default/debug\PWM.X.debug.o
-_TRISC 87 0 ABS 0 - dist/default/debug\PWM.X.debug.o
+__end_of_main FF8 0 CODE 0 maintext dist/default/production\PWM.X.production.o
+_T2CON 12 0 ABS 0 - dist/default/production\PWM.X.production.o
+_TRISB 86 0 ABS 0 - dist/default/production\PWM.X.production.o
+_TRISC 87 0 ABS 0 - dist/default/production\PWM.X.production.o
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
-_CCP1CON 17 0 ABS 0 - dist/default/debug\PWM.X.debug.o
-__initialization FF8 0 CODE 0 cinit dist/default/debug\PWM.X.debug.o
-btemp0 7E 0 ABS 0 - dist/default/debug\PWM.X.debug.o
-btemp1 7F 0 ABS 0 - dist/default/debug\PWM.X.debug.o
-ttemp0a 7F 0 ABS 0 - dist/default/debug\PWM.X.debug.o
-___int_stack_hi 0 0 STACK 2 stack C:\Users\BZ\AppData\Local\Temp\xcAs9jg.0\driver_tmp_12.o
-___int_stack_lo 0 0 STACK 2 stack C:\Users\BZ\AppData\Local\Temp\xcAs9jg.0\driver_tmp_12.o
+_CCP1CON 17 0 ABS 0 - dist/default/production\PWM.X.production.o
+__initialization FF8 0 CODE 0 cinit dist/default/production\PWM.X.production.o
+btemp0 7E 0 ABS 0 - dist/default/production\PWM.X.production.o
+btemp1 7F 0 ABS 0 - dist/default/production\PWM.X.production.o
+ttemp0a 7F 0 ABS 0 - dist/default/production\PWM.X.production.o
+___int_stack_hi 0 0 STACK 2 stack C:\Users\BZ\AppData\Local\Temp\xcAsgao.0\driver_tmp_12.o
+___int_stack_lo 0 0 STACK 2 stack C:\Users\BZ\AppData\Local\Temp\xcAsgao.0\driver_tmp_12.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.

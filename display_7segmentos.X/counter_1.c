@@ -15,7 +15,7 @@ unsigned char NUMBERS[10] = {
     0x7F, //8
     0x6F  //9
     
-}
+};
 
 void main(void) {
     TRISA = 0x01;   // RA0 como entrada

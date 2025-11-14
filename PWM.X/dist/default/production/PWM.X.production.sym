@@ -113,8 +113,8 @@ reset_vec 0 5 CODE 0 0
 cinit FF8 FFF CODE FF8 0
 maintext FAA FF7 CODE FAA 0
 %locals
-dist/default/debug\PWM.X.debug.o
-C:\Users\BZ\AppData\Local\Temp\xcAs9jg.0\driver_tmp_1.s
+dist/default/production\PWM.X.production.o
+C:\Users\BZ\AppData\Local\Temp\xcAsgao.0\driver_tmp_1.s
 354 7FC 0 CODE 0
 357 7FC 0 CODE 0
 363 7FC 0 CODE 0

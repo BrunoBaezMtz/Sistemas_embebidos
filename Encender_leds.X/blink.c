@@ -5,63 +5,36 @@ void main(void) {
     TRISB = 0b00000000;   //Establece B como salida  
    
  while(1) {
-
-    PORTB = 0b00000110;
-    __delay_ms(1000);
-    PORTB = 0b00000000;
-    __delay_ms(1000);
+/*encender leds
+ * uno por uno
+ */
+    PORTB = 0b00000001; //led 0
+    __delay_ms(500);
     
-     PORTB = 0b01011011;
-    __delay_ms(1000);
-    PORTB = 0b00000000;
-    __delay_ms(1000);
+    PORTB = 0b00000010; // led 1
+    __delay_ms(500);
     
-     PORTB = 0b01001111;
-    __delay_ms(1000);
-    PORTB = 0b00000000;
-    __delay_ms(1000);
+     PORTB = 0b00000100; // led 2
+    __delay_ms(500);
     
-     PORTB = 0b11100110;
-    __delay_ms(1000);
-    PORTB = 0b00000000;
-    __delay_ms(1000);
+    PORTB = 0b00001000; // led 3
+    __delay_ms(500);
     
-     PORTB = 0b11101101;
-    __delay_ms(1000);
-    PORTB = 0b00000000;
-    __delay_ms(1000);
+     PORTB = 0b00010000; // led 4
+    __delay_ms(500);
     
-     PORTB = 0b11111101;
-    __delay_ms(1000);
-    PORTB = 0b00000000;
-    __delay_ms(1000);
+    PORTB = 0b00100000; // led 5
+    __delay_ms(500);
     
-     PORTB = 0b10000111;
-    __delay_ms(1000);
-    PORTB = 0b00000000;
-    __delay_ms(1000);
+     PORTB = 0b01000000; // led 6
+    __delay_ms(500);
     
-     PORTB = 0b11111111;
-    __delay_ms(1000);
-    PORTB = 0b00000000;
-    __delay_ms(1000);
+    PORTB = 0b10000000; // led 7
+    __delay_ms(500);
     
-     PORTB = 0b10111111;
-    __delay_ms(1000);
-    PORTB = 0b00000000;
-    __delay_ms(1000);
+    PORTB = 0b00000000; // apagar leds
+    __delay_ms(500);
     }
     return;
-
+    
 }
-
-void main(void){
-    TRISA = 0b11111111;
-        TRISB = 0x00;   //B como salida
-        TRISA = 0xFF;   //A como entrada
-        if (PORTAbits.RA0 == 1){
-        }
-    return;
-        
-}
-

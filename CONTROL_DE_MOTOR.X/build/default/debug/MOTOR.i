@@ -1,4 +1,4 @@
-# 1 "PWM.c"
+# 1 "MOTOR.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 295 "<built-in>" 3
@@ -6,8 +6,7 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include/language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "PWM.c" 2
-
+# 1 "MOTOR.c" 2
 
 
 
@@ -1903,37 +1902,38 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 29 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include/xc.h" 2 3
-# 10 "PWM.c" 2
+# 9 "MOTOR.c" 2
 
 
 
-
-void main() {
-    while(1){
+void pwm_init(void){
+        while(1){
     TRISC = 0b00000000;
-    TRISB = 0b00001111;
-    T2CON = 0b00000101;
+    CCP1CON = 0b00000111;
+
+    CCPR1L = 0b00000000;
     PR2 = 249;
-
-    if (PORTBbits.RB1 == 1);{
-        CCPR1L = 0b1111101000;
-        CCP1CON = 0b00001100;
+    T2CON = 0b00000101;
 }
+}
+void set_percent(unsigned char percent){
+    if (percent>100){
+        percent = 100;
 
-    if (PORTBbits.RB1 == 1);{
-        CCPR1L = 0b1011101110;
-        CCP1CON = 0b00001100;
+    }
+    unsigned int max_counts = (unsigned int)(4U*(PR2+1));
+    unsigned int dc = (unsigned int)((unsigned long)percent*max_counts/100UL);
+    CCPR1L = (unsigned char)(dc>>2);
+    CCP1CONbits.CCP1X = (dc>>1)&1;
+    CCP1CONbits.CCP1Y = dc&1;
     }
 
-    if (PORTBbits.RB1 == 1);{
-        CCPR1L = 0b0111110100;
-        CCP1CON = 0b00001100;
-    }
+void main(){
+    pwm_init();
 
+    set_percent(50);
 
-    if (PORTBbits.RB1 == 0);{
-        CCPR1L = 0b0011111010;
-        CCP1CON = 0b00001100;
-    }
+    while(1){
+
     }
 }
