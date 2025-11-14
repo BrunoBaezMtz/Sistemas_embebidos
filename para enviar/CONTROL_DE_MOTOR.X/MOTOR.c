@@ -12,7 +12,7 @@
 void pwm_init(void){
         while(1){
     TRISC = 0b00000000; //0--> pin como salida
-    CCP1CON = 0b00001111; //configuracion modo pwm
+    CCP1CON = 0b00000111; //configuracion modo pwm
                           // se limpian 2 bits
     CCPR1L = 0b00000000; //se limpian 8 bits
     PR2 = 249;          // frecuencia de 1KHZ
@@ -32,32 +32,11 @@ void set_percent(unsigned char percent){
     }
 
 void main(){
-    TRISB = 0b1111111;
-    TRISA = 0b0000000;
-    
     pwm_init();
     
     set_percent(50); //establece el duty cycle al 50%
     
     while(1){
-        if(PORTBbits.RB0 == 1){
-            PORTA = 00000001;
-        }    
-        if(PORTBbits.RB1 == 1){
-            PORTA = 0b00000010;
-        }    
-        if(PORTBbits.RB2 == 1){
-            counter++;
-            __delay_ms(20);
-            set_percent(counter);
-        }
-        if(PORTBbits.RB3 == 1){
-            counter--;
-            __delay_ms(20);
-        }
-        if(PORTBbits.RB4 == 1){
-            
-        }
         
     }
 }
