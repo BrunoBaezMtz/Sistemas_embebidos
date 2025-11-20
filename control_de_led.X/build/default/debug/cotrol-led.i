@@ -1,4 +1,4 @@
-# 1 "MOTOR.c"
+# 1 "cotrol-led.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 295 "<built-in>" 3
@@ -6,10 +6,25 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include/language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "MOTOR.c" 2
+# 1 "cotrol-led.c" 2
 
 
 
+
+
+
+
+
+# 1 "./PIC16F877ACONFIG.H" 1
+
+#pragma config FOSC = HS
+#pragma config WDTE = OFF
+#pragma config PWRTE = OFF
+#pragma config BOREN = ON
+#pragma config LVP = OFF
+#pragma config CPD = OFF
+#pragma config WRT = OFF
+#pragma config CP = OFF
 
 
 
@@ -1902,59 +1917,25 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 29 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include/xc.h" 2 3
-# 9 "MOTOR.c" 2
+# 15 "./PIC16F877ACONFIG.H" 2
+# 10 "cotrol-led.c" 2
 
 
 
-void pwm_init(void){
-        while(1){
-    TRISC = 0b00000000;
-    CCP1CON = 0b00001111;
+void main(void) {
+    TRISC =0b00000001;
+    TRISD =0b00000000;
 
-    CCPR1L = 0b00000000;
-    PR2 = 249;
-    T2CON = 0b00000101;
-}
-}
-void set_percent(unsigned char percent){
-    if (percent>100){
-        percent = 100;
-
-    }
-    unsigned int max_counts = (unsigned int)(4U*(PR2+1));
-    unsigned int dc = (unsigned int)((unsigned long)percent*max_counts/100UL);
-    CCPR1L = (unsigned char)(dc>>2);
-    CCP1CONbits.CCP1X = (dc>>1)&1;
-    CCP1CONbits.CCP1Y = dc&1;
-    }
-
-void main(){
-    TRISB = 0b1111111;
-    TRISA = 0b0000000;
-
-    pwm_init();
-
-    set_percent(50);
+    PORTDbits.RD0 = 0;
 
     while(1){
-        if(PORTBbits.RB0 == 1){
-            PORTA = 00000001;
+        if(PORTCbits.RC0 == 1){
+            PORTDbits.RD1 == 1;
         }
-        if(PORTBbits.RB1 == 1){
-            PORTA = 0b00000010;
-        }
-        if(PORTBbits.RB2 == 1){
-            counter++;
-            _delay((unsigned long)((20)*(_XTAL_FREQ/4000.0)));
-            set_percent(counter);
-        }
-        if(PORTBbits.RB3 == 1){
-            counter--;
-            _delay((unsigned long)((20)*(_XTAL_FREQ/4000.0)));
-        }
-        if(PORTBbits.RB4 == 1){
+        else{
+          PORTDbits.RD0 = 0;
+
 
         }
-
     }
 }
