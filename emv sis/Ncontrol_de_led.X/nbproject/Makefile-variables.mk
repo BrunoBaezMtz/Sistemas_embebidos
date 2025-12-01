@@ -6,5 +6,5 @@
 CND_BASEDIR=`pwd`
 # default configuration
 CND_ARTIFACT_DIR_default=dist/default/production
-CND_ARTIFACT_NAME_default=control_de_led.X.production.hex
-CND_ARTIFACT_PATH_default=dist/default/production/control_de_led.X.production.hex
+CND_ARTIFACT_NAME_default=Ncontrol_de_led.X.production.hex
+CND_ARTIFACT_PATH_default=dist/default/production/Ncontrol_de_led.X.production.hex

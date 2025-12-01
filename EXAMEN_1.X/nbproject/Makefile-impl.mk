@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=Ncontrol_de_led.X
+PROJECTNAME=EXAMEN_1.X
 
 # Active Configuration
 DEFAULTCONF=default
