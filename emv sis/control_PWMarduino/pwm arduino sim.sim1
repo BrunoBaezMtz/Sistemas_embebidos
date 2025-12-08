@@ -1,0 +1,55 @@
+<circuit version="1.1.0-SR1" rev="2005" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
+
+<item itemtype="MCU" CircId="mega328-1" mainComp="false" Show_id="true" Show_Val="false" Pos="-228,60" rotation="90" hflip="1" vflip="1" label="mega328-1" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Frequency="16 MHz" Program="../Sistemas_embebidos/emv sis/control_PWMarduino/control_PWMarduino.ino.standard.hex" Auto_Load="false" saveEepr="true" Logic_Symbol="false" Rst_enabled="false" Ext_Osc="false" Wdt_enabled="false" Clk_Out="false" MainMcu="true" SerialMon="-1" />
+
+<item itemtype="Subcircuit" CircId="L298P-2" mainComp="false" Show_id="true" Show_Val="false" Pos="-224,-36" rotation="0" hflip="1" vflip="1" label="L298P-2" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Input_High_V="2.5 V" Input_Low_V="2.5 V" Input_Imped="1e+09 Ω" Out_High_V="5 V" Out_Low_V="0 V" Out_Imped="40 Ω" Tpd_ps="10 ns" Tr_ps="3 ns" Tf_ps="4 ns" Logic_Symbol="true" />
+
+<item itemtype="DcMotor" CircId="DcMotor-3" mainComp="false" Show_id="true" Show_Val="false" Pos="-100,56" rotation="0" hflip="1" vflip="1" label="DcMotor-3" idLabPos="-22,-48" labelrot="0" valLabPos="-14,36" valLabRot="0" RPM_Nominal="60 _RPM" Volt_Nominal="5 V" Resistance="100 Ω" />
+
+<item itemtype="Potentiometer" CircId="Potentiometer-4" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-176,-64" rotation="0" hflip="1" vflip="1" label="Potentiometer-4" idLabPos="-16,-40" labelrot="0" valLabPos="15,-20" valLabRot="0" Resistance="10 kΩ" Value_Ohm="2590 Ω" Slider="false" Scale="1" />
+
+<item itemtype="Push" CircId="Push-5" mainComp="false" Show_id="false" Show_Val="false" Pos="-300,-80" rotation="0" hflip="1" vflip="1" label="Push-5" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Norm_Close="false" Poles="1" />
+
+<item itemtype="Push" CircId="Push-6" mainComp="false" Show_id="false" Show_Val="false" Pos="-240,-80" rotation="0" hflip="1" vflip="1" label="Push-6" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Norm_Close="false" Poles="1" />
+
+<item itemtype="Fixed Voltage" CircId="Fixed Voltage-7" mainComp="false" Show_id="false" Show_Val="false" Pos="-204,-104" rotation="90" hflip="1" vflip="1" label="Fixed Voltage-7" idLabPos="-64,-24" labelrot="0" valLabPos="-16,8" valLabRot="0" Voltage="5 V" Out="true" />
+
+<item itemtype="Fixed Voltage" CircId="Fixed Voltage-8" mainComp="false" Show_id="false" Show_Val="false" Pos="-160,44" rotation="-90" hflip="1" vflip="1" label="Fixed Voltage-8" idLabPos="-64,-24" labelrot="0" valLabPos="-16,8" valLabRot="0" Voltage="5 V" Out="true" />
+
+<item itemtype="Ground" CircId="Ground-9" mainComp="false" Show_id="false" Show_Val="false" Pos="-268,-40" rotation="0" hflip="1" vflip="1" label="Ground-9" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Ground" CircId="Ground-11" mainComp="false" Show_id="false" Show_Val="false" Pos="-128,-44" rotation="0" hflip="1" vflip="1" label="Ground-11" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Ground" CircId="Ground-12" mainComp="false" Show_id="false" Show_Val="false" Pos="-180,104" rotation="0" hflip="1" vflip="1" label="Ground-12" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Ground" CircId="Ground-13" mainComp="false" Show_id="false" Show_Val="false" Pos="-224,-124" rotation="-180" hflip="1" vflip="1" label="Ground-13" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Connector" uid="Connector-1" startpinid="L298P-2-IN1" endpinid="mega328-1-PORTD4" pointList="-232,-28,-276,-28,-276,52" />
+
+<item itemtype="Connector" uid="Connector-2" startpinid="L298P-2-IN2" endpinid="mega328-1-PORTD5" pointList="-232,-20,-316,-20,-316,52" />
+
+<item itemtype="Connector" uid="Connector-3" startpinid="L298P-2-EnA" endpinid="mega328-1-PORTD6" pointList="-232,12,-324,12,-324,52" />
+
+<item itemtype="Connector" uid="Connector-4" startpinid="L298P-2-OUT1" endpinid="DcMotor-3-lPin" pointList="-184,-28,-140,-28,-140,56" />
+
+<item itemtype="Connector" uid="Connector-5" startpinid="L298P-2-OUT2" endpinid="DcMotor-3-rPin" pointList="-184,-20,-60,-20,-60,56" />
+
+<item itemtype="Connector" uid="Connector-6" startpinid="Push-5-pinP0" endpinid="mega328-1-PORTD2" pointList="-316,-80,-316,28,-260,28,-260,52" />
+
+<item itemtype="Connector" uid="Connector-8" startpinid="Push-6-pinP0" endpinid="mega328-1-PORTD3" pointList="-256,-80,-256,20,-268,20,-268,52" />
+
+<item itemtype="Connector" uid="Connector-12" startpinid="Potentiometer-4-PinA" endpinid="Fixed Voltage-7-outnod" pointList="-192,-64,-204,-64,-204,-88" />
+
+<item itemtype="Connector" uid="Connector-14" startpinid="Potentiometer-4-PinB" endpinid="Ground-11-Gnd" pointList="-160,-64,-128,-64,-128,-60" />
+
+<item itemtype="Connector" uid="Connector-16" startpinid="Fixed Voltage-8-outnod" endpinid="L298P-2-Vs" pointList="-160,28,-160,12,-184,12" />
+
+<item itemtype="Connector" uid="Connector-18" startpinid="Push-5-switch0pinN" endpinid="Ground-9-Gnd" pointList="-284,-80,-268,-80,-268,-56" />
+
+<item itemtype="Connector" uid="Connector-19" startpinid="Push-6-switch0pinN" endpinid="Ground-13-Gnd" pointList="-224,-80,-224,-108" />
+
+<item itemtype="Connector" uid="Connector-20" startpinid="Ground-12-Gnd" endpinid="L298P-2-SenA" pointList="-180,88,-180,20,-184,20" />
+
+<item itemtype="Connector" uid="Connector-21" startpinid="Potentiometer-4-PinM" endpinid="mega328-1-PORTC0" pointList="-176,-48,-176,120,-276,120,-276,100" />
+
+</circuit>
